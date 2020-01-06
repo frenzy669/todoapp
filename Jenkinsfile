@@ -15,7 +15,7 @@ node {
    }
    stage('docker build/push') {
      docker.withRegistry('https://index.docker.io/v1/', '361e4825-62e7-4613-bd3a-63e25fb9c206	') {
-       def app = docker.build("frenzy669/docker-nodejs-demo:assaf-${commit_id}", 'basics').push()
+       def app = docker.build("frenzy669/docker-nodejs-demo:barak-${commit_id}", '.').push()
      }
    }
    stage('docker run') {
